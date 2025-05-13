@@ -32,7 +32,7 @@ config mixin 'mixin'
 	option match_process 'off'
 	option ipv6 '1'
 	option ui_path 'ui'
-	option ui_url 'https://github.com/Zephyruso/zashboard/releases/latest/download/dist-cdn-fonts.zip'
+	option ui_url 'https://github.moeyy.xyz/https://github.com/Zephyruso/zashboard/releases/latest/download/dist-cdn-fonts.zip'
 	option api_listen '[::]:9090'
 	option selection_cache '1'
 	option allow_lan '1'
@@ -187,47 +187,7 @@ config editor 'editor'
 config log 'log'
 
 config subscription
-	option name '聚合机场'
-	option url '1'
-	option user_agent 'clash.meta'
-	option prefer 'remote'
-	option success '0'
-	
-config subscription
-	option name '火烧云'
-	option user_agent 'clash.meta'
-	option prefer 'remote'
-	option url '2'
-
-config subscription
-	option name '小牛'
-	option url '2'
-	option user_agent 'clash.meta'
-	option prefer 'remote'
-	option update '2025-03-14 21:31:45'
-	option success '1'
-
-config subscription
 	option name '硅谷云'
 	option user_agent 'clash.meta'
 	option prefer 'remote'
 	option url '2'
-
-config subscription
-	option name '猫耳'
-	option url '3'
-	option user_agent 'clash.meta'
-	option prefer 'remote'
-
-config subscription
-	option name '快猫'
-	option url '5'
-	option user_agent 'clash.meta'
-	option prefer 'remote'
-
-config subscription
-	option name '牛逼'
-	option url '6'
-	option user_agent 'clash.meta'
-	option prefer 'remote'
-
