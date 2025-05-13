@@ -76,6 +76,13 @@ config mixin 'mixin'
 	option sniffer '1'
 	option sniffer_sniff_dns_mapping '1'
 	option sniffer_sniff_pure_ip '1'
+	option geosite_url 'https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat'
+	option geoip_dat_url 'https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat'
+	option dns_respect_rules '1'
+	option geoip_mmdb_url 'https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb'
+	option geoip_asn_url 'https://gh-proxy.com/https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
+	option dns_doh_prefer_http3 '0'
+	option geodata_loader 'standard'
 
 config env 'env'
 	option disable_safe_path_check '0'
@@ -129,8 +136,8 @@ config hosts
 config nameserver
 	option enabled '0'
 	option type 'default-nameserver'
-	list nameserver '223.5.5.5'
-	list nameserver '223.6.6.6'
+	list nameserver '202.102.213.68'
+	list nameserver '61.132.163.68'
 
 config nameserver
 	option enabled '0'
@@ -147,7 +154,8 @@ config nameserver
 config nameserver
 	option enabled '1'
 	option type 'nameserver'
-	list nameserver '223.5.5.5'
+	list nameserver '202.102.213.68'
+	list nameserver '61.132.163.68'
 
 config nameserver_policy
 	option enabled '1'
@@ -185,6 +193,30 @@ config sniff
 config editor 'editor'
 
 config log 'log'
+
+config rule
+	option enabled '1'
+	option type 'DOMAIN-KEYWORD'
+	option matcher '163189.xyz'
+	option node 'GLOBAL'
+
+config rule
+	option enabled '1'
+	option type 'DOMAIN-KEYWORD'
+	option matcher '163.dedyn.io'
+	option node 'GLOBAL'
+
+config rule
+	option enabled '1'
+	option type 'DOMAIN-KEYWORD'
+	option matcher 'freetv.fun'
+	option node 'DIRECT'
+
+config subscription
+	option name '红杏云'
+	option user_agent 'clash.meta'
+	option prefer 'remote'
+	option url '1'
 
 config subscription
 	option name '硅谷云'
